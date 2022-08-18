@@ -150,6 +150,7 @@ router.post("/", auth.required, function (req, res, next) {
       if (item.image === "") {
         item.image = "placeholder.png";
       }
+      console.log(item);
       item.seller = user;
 
       return item.save().then(function () {
