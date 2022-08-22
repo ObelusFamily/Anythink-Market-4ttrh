@@ -8,7 +8,7 @@ var ItemSchema = new mongoose.Schema(
     slug: { type: String, lowercase: true, unique: true },
     title: String,
     description: String,
-    image: { type: String, requires: true },
+    image: { type: String, required: true },
     favoritesCount: { type: Number, default: 0 },
     comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
     tagList: [{ type: String }],
